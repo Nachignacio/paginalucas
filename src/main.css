@@ -1,0 +1,177 @@
+body #backgroundVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+#navBar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: 40px;
+  background-color: rgba(128, 128, 128, 0.507);
+  height: 50px;
+}
+#navBar ul li {
+  position: relative;
+  transition: color 0.5s;
+}
+#navBar ul li:hover {
+  color: white;
+}
+#navBar ul li:hover ul {
+  color: white;
+}
+#navBar ul li ul {
+  display: none;
+  height: auto;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transition: 1s;
+}
+#navBar ul li ul:hover {
+  background-color: rgb(128, 128, 128);
+}
+
+#gridHome {
+  font-size: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "aboutUs aboutUsText" "commercialArchitectureText commercialArchitecture" "realEstateSale realEstateSaleText" "designIdeasText designIdeas";
+  gap: 70px;
+}
+#gridHome :nth-child(4n+3) {
+  display: flex;
+  flex-direction: row;
+  justify-content: left !important;
+}
+#gridHome .aboutUs {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: aboutUs;
+  width: 700px;
+}
+#gridHome .aboutUs p {
+  padding: 50px;
+  background-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-radius: 0 50px 0 50px;
+}
+#gridHome .aboutUsText {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: aboutUsText;
+  width: 700px;
+}
+#gridHome .aboutUsText p {
+  padding: 50px;
+  background-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-radius: 0 50px 0 50px;
+}
+#gridHome .commercialArchitecture {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: commercialArchitecture;
+  width: 700px;
+}
+#gridHome .commercialArchitecture p {
+  padding: 50px;
+  background-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-radius: 0 50px 0 50px;
+}
+#gridHome .commercialArchitectureText {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: commercialArchitectureText;
+  width: 700px;
+}
+#gridHome .commercialArchitectureText p {
+  padding: 50px;
+  background-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-radius: 0 50px 0 50px;
+}
+#gridHome .realEstateSale {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: realEstateSale;
+  width: 700px;
+}
+#gridHome .realEstateSale p {
+  padding: 50px;
+  background-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-radius: 0 50px 0 50px;
+}
+#gridHome .realEstateSaleText {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: realEstateSaleText;
+  width: 700px;
+}
+#gridHome .realEstateSaleText p {
+  padding: 50px;
+  background-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-radius: 0 50px 0 50px;
+}
+#gridHome .designIdeas {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: designIdeas;
+  width: 700px;
+}
+#gridHome .designIdeas p {
+  padding: 50px;
+  background-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-radius: 0 50px 0 50px;
+}
+#gridHome .designIdeasText {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: designIdeasText;
+  width: 700px;
+}
+#gridHome .designIdeasText p {
+  padding: 50px;
+  background-color: rgb(169, 169, 169);
+  border-style: solid;
+  border-radius: 0 50px 0 50px;
+}
+
+/*# sourceMappingURL=main.css.map */

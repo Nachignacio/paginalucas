@@ -1,0 +1,35 @@
+#navBar {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+        font-size: 40px;
+        background-color: rgba(128, 128, 128, 0.507);
+        height: 50px;
+        li {
+            position: relative;
+            transition: color 0.5s; // Transicion solo para el cambio de color
+            &:hover {
+            color: white;
+                ul {
+                    color: white;
+
+                }
+            }
+            ul {                  //Nested list
+                display: none;
+                height: auto;
+                padding: 20px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 2;                
+                transition: 1s; // Transicion en cambio de color
+                &:hover{
+                    background-color: rgba(128, 128, 128);
+                }
+            }
+        }
+    }
+}

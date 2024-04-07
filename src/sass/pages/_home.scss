@@ -14,6 +14,7 @@
         flex-direction: row;
         justify-content: left !important; //Es para que se justifiquen hacia la izquierda sin importar los estilos de los hijos
     }
+    
     @each $position, $element in $texts{ //Usando el maps de textos generalizo los estilos para cada bloque en Home
         .#{$element}{
             margin: $marginHome;

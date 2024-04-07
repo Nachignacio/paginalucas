@@ -1,5 +1,10 @@
+@font-face {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 @import "./utilities/variables";
 @import "./utilities/maps";
 @import "./pages/layout";
 @import "./components/navBar";
 @import "./pages/home";
+@import "./components/footer";

@@ -1,3 +1,6 @@
+@font-face {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 body #backgroundVideo {
   width: 100vw;
   height: 100vh;
@@ -8,12 +11,19 @@ body #backgroundVideo {
   top: 0;
   bottom: 0;
   z-index: -1;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 100%;
 }
 body h1 {
   display: flex;
   justify-content: center;
   font-size: 50px;
+}
+@font-face {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  margin: 0; /*Reseteo para que no me aparezcan los margenes por default del browser*/
 }
 
 #navBar ul {
@@ -51,19 +61,32 @@ body h1 {
 }
 
 #gridHome {
+  background-color: rgb(248, 207, 153);
   font-size: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "aboutUs aboutUsText" "commercialArchitectureText commercialArchitecture" "realEstateSale realEstateSaleText" "designIdeasText designIdeas";
-  gap: 70px;
+  gap: 10px;
 }
 #gridHome :nth-child(4n+3) {
   display: flex;
   flex-direction: row;
   justify-content: left !important;
 }
+#gridHome :nth-child(4n) {
+  position: relative;
+  right: -200px;
+}
 #gridHome .aboutUs {
-  margin: 100px;
+  position: relative;
+  right: -200px;
+}
+#gridHome .realEstateSale {
+  position: relative;
+  right: -200px;
+}
+#gridHome .aboutUs {
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -72,12 +95,14 @@ body h1 {
 }
 #gridHome .aboutUs p {
   padding: 50px;
-  background-color: rgb(169, 169, 169);
+  background-color: rgb(245, 205, 120);
   border-style: solid;
   border-radius: 0 50px 0 50px;
+  border-left: none;
+  border-right: none;
 }
 #gridHome .aboutUsText {
-  margin: 100px;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -86,12 +111,14 @@ body h1 {
 }
 #gridHome .aboutUsText p {
   padding: 50px;
-  background-color: rgb(169, 169, 169);
+  background-color: rgb(245, 205, 120);
   border-style: solid;
   border-radius: 0 50px 0 50px;
+  border-left: none;
+  border-right: none;
 }
 #gridHome .commercialArchitecture {
-  margin: 100px;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -100,12 +127,14 @@ body h1 {
 }
 #gridHome .commercialArchitecture p {
   padding: 50px;
-  background-color: rgb(169, 169, 169);
+  background-color: rgb(245, 205, 120);
   border-style: solid;
   border-radius: 0 50px 0 50px;
+  border-left: none;
+  border-right: none;
 }
 #gridHome .commercialArchitectureText {
-  margin: 100px;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -114,12 +143,14 @@ body h1 {
 }
 #gridHome .commercialArchitectureText p {
   padding: 50px;
-  background-color: rgb(169, 169, 169);
+  background-color: rgb(245, 205, 120);
   border-style: solid;
   border-radius: 0 50px 0 50px;
+  border-left: none;
+  border-right: none;
 }
 #gridHome .realEstateSale {
-  margin: 100px;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -128,12 +159,14 @@ body h1 {
 }
 #gridHome .realEstateSale p {
   padding: 50px;
-  background-color: rgb(169, 169, 169);
+  background-color: rgb(245, 205, 120);
   border-style: solid;
   border-radius: 0 50px 0 50px;
+  border-left: none;
+  border-right: none;
 }
 #gridHome .realEstateSaleText {
-  margin: 100px;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -142,12 +175,14 @@ body h1 {
 }
 #gridHome .realEstateSaleText p {
   padding: 50px;
-  background-color: rgb(169, 169, 169);
+  background-color: rgb(245, 205, 120);
   border-style: solid;
   border-radius: 0 50px 0 50px;
+  border-left: none;
+  border-right: none;
 }
 #gridHome .designIdeas {
-  margin: 100px;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -156,12 +191,14 @@ body h1 {
 }
 #gridHome .designIdeas p {
   padding: 50px;
-  background-color: rgb(169, 169, 169);
+  background-color: rgb(245, 205, 120);
   border-style: solid;
   border-radius: 0 50px 0 50px;
+  border-left: none;
+  border-right: none;
 }
 #gridHome .designIdeasText {
-  margin: 100px;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -170,9 +207,40 @@ body h1 {
 }
 #gridHome .designIdeasText p {
   padding: 50px;
-  background-color: rgb(169, 169, 169);
+  background-color: rgb(245, 205, 120);
   border-style: solid;
   border-radius: 0 50px 0 50px;
+  border-left: none;
+  border-right: none;
+}
+
+#homeMail {
+  background-color: white;
+}
+#homeMail form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#homeMail form label {
+  margin: 50px;
+}
+#homeMail form input {
+  margin: 0px;
+  width: 450px;
+}
+#homeMail form textarea {
+  width: 40%;
+  height: 100px;
+}
+
+#footer {
+  background-color: rgb(11, 12, 37);
+  max-width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

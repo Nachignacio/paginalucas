@@ -1,0 +1,76 @@
+#gridHome{
+    background-color: $colorHomeBackground;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "aboutUs aboutUsText"
+    "commercialArchitectureText commercialArchitecture"
+    "realEstateSale realEstateSaleText"
+    "designIdeasText designIdeas";
+    gap: $homeGridGap;
+
+    :nth-child(4n+3){ //Con esto selecciono solo los titulos de la derecha
+        display: flex;
+        flex-direction: row;
+        justify-content: left !important; //Es para que se justifiquen hacia la izquierda sin importar los estilos de los hijos
+    }
+
+    :nth-child(4n){
+        position: relative;
+        right: -200px;
+    }
+
+    .aboutUs{              //No esta bueno hacer esto manualmente sin el loopp pero no se me ocurre mejor forma, es para que se centren los titulos con los textos
+        position: relative;
+        right: -200px;
+    }
+
+    .realEstateSale{      //No esta bueno hacer esto manualmente sin el loopp pero no se me ocurre mejor forma, es para que se centren los titulos con los textos
+        position: relative;
+        right: -200px;
+    }
+    
+
+    @each $position, $element in $texts{ //Usando el maps de textos generalizo los estilos para cada bloque en Home
+        .#{$element}{
+            margin: $marginHome;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            grid-area: $element;
+            width: 700px;
+            p{
+                padding: 50px;
+                background-color: $colorHomeCards;
+                border-style: solid;
+                border-radius: 0 50px 0 50px;
+                border-left: none;
+                border-right: none;
+            }
+        }
+    }
+    
+}
+#homeMail{
+    background-color: white;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        label{
+            margin: 50px;
+        }
+        input{
+            margin: 0px;
+            width: 450px;
+        }
+
+        textarea{
+            width: 40%;
+            height: 100px;
+        }
+    }
+    
+}

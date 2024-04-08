@@ -8,13 +8,18 @@ function Home(){
     },[])
     return(
         <div>
-            <div id="gridHome">
-                <h1 className="aboutUs" data-aos="fade-right" data-aos-duration="1000">
-                    <p>ABOUT US</p>
-                </h1>
-                <p className="aboutUsText" data-aos="fade-left" data-aos-duration="1000">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?</p>
-                </p>
+            <div id="gridHome" className="container text-center">
+                <div className="row">
+                    <div className="column">
+                        <h1 className="aboutUs" data-aos="fade-right" data-aos-duration="1000">
+                            <p>ABOUT US</p>
+                        </h1>
+                    <div className="column"></div>
+                        <p className="aboutUsText" data-aos="fade-left" data-aos-duration="1000">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?</p>
+                        </p>
+                    </div>
+                </div>
                 <h2 className="commercialArchitecture" data-aos="fade-left" data-aos-duration="1000">
                     <p>COMMERCIAL ARCHITECTURE</p>
                 </h2>
@@ -35,15 +40,21 @@ function Home(){
                 </p>
             </div>
             <section id="homeMail">
-                <form>
-                    <label forHTML="firstName">First Name</label>
-                    <input id="firstName"></input>
-                    <label forHTML="lastName">Last Name</label>
-                    <input id="lastName"></input>
+                <form method="post" action="https://formsubmit.co/nachomanfredini@gmail.com">
+                    <label forHTML="name">First Name</label>
+                    <input type="text" id="name" name="name" required></input>
+
                     <label forHTML="email">Email</label>
-                    <input id="email"></input>
-                    <label forHTML="textareaHome">Contact us:</label>
-                    <textarea id="textareaHome"></textarea>
+                    <input type="email" name="email" id="email" required></input>
+                    
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" required></input>
+
+                    <label forHTML="message">Contact us:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button>Send</button>
+                
                 </form>
             </section>
             <footer id="footer">

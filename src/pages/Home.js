@@ -1,11 +1,19 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect } from 'react';
+import axios from 'axios';
+
 
 function Home(){
+
+
     useEffect(()=>{
         Aos.init(1500); //Necesario para inicializar el Aos al cargarse el componente y tener los efectos de deslizarse al scrollear
     },[])
+
+    async function sendEmail(){
+        await axios.post('send-email.php');
+    }
     return(
         <div>
             <div id="gridHome" className="container text-center">
@@ -16,7 +24,7 @@ function Home(){
                         </h1>
                     <div className="column"></div>
                         <p className="aboutUsText" data-aos="fade-left" data-aos-duration="1000">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?</p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?
                         </p>
                     </div>
                 </div>
@@ -24,33 +32,34 @@ function Home(){
                     <p>COMMERCIAL ARCHITECTURE</p>
                 </h2>
                 <p className="commercialArchitectureText" data-aos="fade-right" data-aos-duration="1000">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?
                 </p>
                 <h2 className="realEstateSale" data-aos="fade-right" data-aos-duration="1000">
                     <p>REAL ESTATE SALE</p>
                 </h2>
                 <p className="realEstateSaleText" data-aos="fade-left" data-aos-duration="1000">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?
                 </p>
                 <h2 className="designIdeas" data-aos="fade-left" data-aos-duration="1000">
                     <p>DESIGN IDEAS</p>
                 </h2>
                 <p className="designIdeasText" data-aos="fade-right" data-aos-duration="1000">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?
                 </p>
             </div>
             <section id="homeMail">
-                <form method="post" action="https://formsubmit.co/nachomanfredini@gmail.com">
-                    <label forHTML="name">First Name</label>
+
+                <form method="post" action="send-email.php">
+                    <label htmlFor="name">First Name</label>
                     <input type="text" id="name" name="name" required></input>
 
-                    <label forHTML="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" name="email" id="email" required></input>
                     
-                    <label for="subject">Subject</label>
+                    <label htmlFor="subject">Subject</label>
                     <input type="text" name="subject" id="subject" required></input>
 
-                    <label forHTML="message">Contact us:</label>
+                    <label htmlFor="message">Contact us:</label>
                     <textarea id="message" name="message" required></textarea>
 
                     <button>Send</button>

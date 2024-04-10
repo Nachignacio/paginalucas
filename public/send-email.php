@@ -1,5 +1,7 @@
 <?php
 
+echo "Hola Nacho";
+
 $name = $_POST["name"];
 $email = $_POST["email"];
 $subject = $_POST["subject"];
@@ -21,15 +23,18 @@ $mail -> Host = "smtp.gmail.com";
 $mail -> SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail -> Port = 587;
 
-$mail -> Username = "nachomanfredini@gmail.com"
+$mail -> Username = "nachomanfredini@gmail.com";
 $mail -> Password = "gpyz joks esue yvdj";
 
 $mail -> setFrom($email, $name);
-$mail -> addAddress("nachomanfredini@gmail.com", "Ignacio");
+$mail -> addAddress("nachomanfredini@gmail.com", $name);
 
 $mail -> Subject = $subject;
-$mail -> Body = $message;
+$from = "\n\n\n\nThis mail is from: ";
+$mail -> Body = $message . $from . $email;
 
 $mail -> send();
 
-header("Location: index.html")
+header("Location: http://www.onyria.com");
+
+?>

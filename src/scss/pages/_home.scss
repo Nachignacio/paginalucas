@@ -1,16 +1,33 @@
 #gridHome{
+    height: auto;
     background-color: $colorHomeBackground;
     font-size: 30px;
-    display: grid;
+    .col-sm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #simbolos{
+            height: 100px;
+            margin: 50px;
+            width: fit-content;
+        }
+        img{
+            max-width: 500px;
+        }
+    }
+    #aboutUs{
+        border-bottom: solid;
+    }
+    /*display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "aboutUs aboutUsText"
     "commercialArchitectureText commercialArchitecture"
     "realEstateSale realEstateSaleText"
     "designIdeasText designIdeas";
-    gap: $homeGridGap;
+    gap: $homeGridGap;*/
 
-    :nth-child(4n+3){ //Con esto selecciono solo los titulos de la derecha
+    /*:nth-child(4n+3){ //Con esto selecciono solo los titulos de la derecha
         display: flex;
         flex-direction: row;
         justify-content: left !important; //Es para que se justifiquen hacia la izquierda sin importar los estilos de los hijos
@@ -29,11 +46,11 @@
     .realEstateSale{      //No esta bueno hacer esto manualmente sin el loopp pero no se me ocurre mejor forma, es para que se centren los titulos con los textos
         position: relative;
         right: -200px;
-    }
+    }*/
     
 
     @each $position, $element in $texts{ //Usando el maps de textos generalizo los estilos para cada bloque en Home
-        .#{$element}{
+        /*.#{$element}{
             margin: $marginHome;
             display: flex;
             align-items: center;
@@ -48,11 +65,12 @@
                 border-left: none;
                 border-right: none;
             }
-        }
+        }*/
     }
     
-}
+} 
 #homeMail{
+    position: relative;
     background-color: white;
     form{
         display: flex;

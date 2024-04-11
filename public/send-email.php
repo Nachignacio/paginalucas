@@ -29,8 +29,12 @@ $mail -> Password = "gpyz joks esue yvdj";
 $mail -> setFrom($email, $name);
 $mail -> addAddress("nachomanfredini@gmail.com", $name);
 
-$mail -> Subject = $subject;
-$from = "\n\n\n\nThis mail is from: ";
+$subjectSpace = " - ";
+
+$mail -> Subject = $name . $subjectSpace . $subject;
+
+$from = "\n\n\n\n\n\nThis mail is from: ";
+
 $mail -> Body = $message . $from . $email;
 
 $mail -> send();

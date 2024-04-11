@@ -1,3 +1,17 @@
+@media screen and (min-width: 1200px) {
+  .col-sm:nth-child(even) {
+    position: relative;
+    top: 680px;
+  }
+  #gridHome {
+    height: 50000px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .lastGridHomeRow .col-sm:last-child {
+    display: none !important;
+  }
+}
 body #backgroundVideo {
   width: 100vw;
   height: 100vh;
@@ -55,7 +69,7 @@ body h1 {
 }
 
 #gridHome {
-  height: auto;
+  height: fit-content;
   background-color: white;
   font-size: 30px;
   /*display: grid;
@@ -233,6 +247,7 @@ body h1 {
 }
 
 #homeMail {
+  z-index: -1;
   position: relative;
   background-color: white;
 }
@@ -260,6 +275,7 @@ body h1 {
   padding: 20px;
   margin-top: 20px;
   color: white;
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */

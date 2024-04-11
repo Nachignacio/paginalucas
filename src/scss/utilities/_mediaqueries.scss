@@ -1,0 +1,16 @@
+@media screen and (min-width: 1200px) {
+    .col-sm:nth-child(even){
+            position: relative;
+            top: 680px;
+    }
+    
+    #gridHome{
+        height: 50000px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .lastGridHomeRow .col-sm:last-child{
+        display: none !important;
+    }
+}

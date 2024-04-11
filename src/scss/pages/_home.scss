@@ -1,5 +1,5 @@
 #gridHome{
-    height: auto;
+    height:fit-content;
     background-color: $colorHomeBackground;
     font-size: 30px;
     .col-sm{
@@ -70,6 +70,7 @@
     
 } 
 #homeMail{
+    z-index: -1;
     position: relative;
     background-color: white;
     form{

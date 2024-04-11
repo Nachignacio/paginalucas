@@ -77,7 +77,7 @@ function Home(){
                         </p>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row lastGridHomeRow">
                     <div className="col-sm">
                         <img src={landscaping} alt="Landscaping" data-aos="fade-right"/>
                         <img src={simbolos} id="simbolos" alt="Lineas verticales" data-aos="fade-right"/>
@@ -88,6 +88,7 @@ function Home(){
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deserunt, fugit ullam distinctio nemo voluptates sequi veniam obcaecati sint nesciunt ipsa repellat repudiandae aspernatur, explicabo, exercitationem voluptatem ex quibusdam. Necessitatibus?
                         </p>
                     </div>
+                    <div className="col-sm"></div>
                 </div>
             </div>
             <section id="homeMail">
